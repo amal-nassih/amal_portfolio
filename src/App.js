@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar/Navbar';
+import {ModeSwitcher} from './components';
+import { About, Footer,Header, Skills, Work,Testimonial } from './container';
+import './App.scss';  
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  return ( 
+    <div className='app'>
+        <div className='app__mode-switcher'>
+          <div className='app__mode-switcher-logo' Style={{ zIndex:'1000' }}>
+                 <ModeSwitcher />      
+          </div>   
+        </div>
+        <Navbar />
+        <Header />
+        <About />
+        <Work />
+        <Skills/>
+        <Footer />
     </div>
-  );
+  )
 }
-
-export default App;
+ 
+export default App 
